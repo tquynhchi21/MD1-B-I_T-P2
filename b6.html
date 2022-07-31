@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>nhập 1 năm bất kì</h1>
+<input type="text"  id="nam">
+<button   onclick="kiemTraNamNhuan()">kiểm tra</button>
+<p id="ketQua"></p>
+<script>
+    function kiemTraNamNhuan() {
+        let nhapNam = +document.getElementById("nam").value;
+        if(nhapNam %4 == 0){
+            if(nhapNam %100 == 0){
+                if(nhapNam %400 == 0){
+                    document.getElementById("ketQua").innerText="năm nhuận"
+                }else {
+                    document.getElementById("ketQua").innerText="năm không nhuận"
+                }
+            }else{
+                document.getElementById("ketQua").innerText="năm nhuận"
+            }
+        }else {
+            document.getElementById("ketQua").innerText="năm không nhuận"
+        }
+    }
+
+</script>
+</body>
+</html>

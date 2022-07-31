@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="ngayId">nhập ngày <br>
+<input type="text" id="thangId">nhập tháng <br>
+<input type="text" id="namId">nhập năm <br>
+<button onclick="KiemTraCungHoangDao()">kết quả</button>
+<p id="ketQua"></p>
+
+<script>
+    function KiemTraCungHoangDao(){
+        let ngay =+document.getElementById("ngayId").value
+        let thang =+document.getElementById("thangId").value
+        let nam =+document.getElementById("namId").value
+
+        if(nam>2022){
+            document.getElementById("ketQua").innerHTML="bạn chưa ra đời";
+        }
+        else if(nam<0){
+            document.getElementById("ketQua").innerHTML="nhập sai thông tin";
+        } else{
+            switch(thang){
+                case 1:
+                    if( ngay<=19 && ngay>0){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung ma kết";
+                    }
+                    else if (ngay>19 && ngay <=31){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung bảo bình";
+                    }
+                    else{
+                        document.getElementById("ketQua").innerHTML="không có ngày mà bạn nhập";
+                    }break;
+
+
+                case 2:
+                    if(ngay<=18 && ngay >0){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung bảo bình";
+                    }
+                    else if(ngay>18 && ngay <=28){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung song ngư";
+                    }
+                    else{
+                        document.getElementById("ketQua").innerHTML="không có ngày mà bạn nhập";
+                    }break;
+
+
+                case 3:
+                    if(ngay<=20 && ngay >0){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung song ngư";
+                    }
+                    else if(ngay>20 && ngay <=31){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung bạch dương";
+                    }
+                    else{
+                        document.getElementById("ketQua").innerHTML="không có ngày mà bạn nhập";
+                    }break;
+
+
+                case 4:
+                    if(ngay<=19 && ngay >0){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung bạch dương";
+                    }
+                    else if(ngay>19 && ngay <=30){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung kim ngưu";
+                    }
+                    else{
+                        document.getElementById("ketQua").innerHTML="không có ngày mà bạn nhập";
+                    }break;
+
+                case 5:
+                    if(ngay<=20 && ngay >0){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung kim ngưu";
+                    }
+                    else if(ngay>20 && ngay <=31){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung song tử";
+                    }
+                    else{
+                        document.getElementById("ketQua").innerHTML="không có ngày mà bạn nhập";
+                    }break;
+
+
+                case 6:
+                    if(ngay<=21 && ngay >0){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung song tử";
+                    }
+                    else if(ngay>21 && ngay <=30){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung cự giải";
+                    }
+                    else{
+                        document.getElementById("ketQua").innerHTML="không có ngày mà bạn nhập";
+                    }break;
+
+
+                case 7:
+                    if(ngay<=22 && ngay >0){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung cự giải";
+                    }
+                    else if(ngay>22 && ngay<=31){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung sư tử";
+                    }
+                    else{
+                        document.getElementById("ketQua").innerHTML="không có ngày mà bạn nhập";
+                    }break;
+
+
+                case 8:
+                    if(ngay<=22&& ngay >0){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung sư tử";
+                    }
+                    else if(ngay>22 && ngay<=31){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung sử nữ";
+                    }
+                    else{
+                        document.getElementById("ketQua").innerHTML="không có ngày mà bạn nhập";
+                    }break;
+
+
+                case 9:
+                    if(ngay<=22 && ngay >0){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung sử nữ";
+                    }
+                    else if(ngay>22 && ngay <=30){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung thiên bình";
+                    }
+                    else{
+                        document.getElementById("ketQua").innerHTML="không có ngày mà bạn nhập";
+                    }break;
+
+
+                case 10:
+                    if(ngay<=23 && ngay>0){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung thiên bình";
+                    }
+                    else if(ngay>23&& ngay<=31){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung hổ cáp";
+                    }
+                    else{
+                        document.getElementById("ketQua").innerHTML="không có ngày mà bạn nhập";
+                    }break;
+
+
+                case 11:
+                    if(ngay<=21&& ngay>0){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung hổ cáp";
+                    }
+                    else if(ngay>21 && ngay <=30){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung nhân mã";
+                    }
+                    else{
+                        document.getElementById("ketQua").innerHTML="không có ngày mà bạn nhập";
+                    }break;
+
+
+                case 12:
+                    if(ngay<=21 && ngay >0){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung nhân mã";
+                    }
+                    else if(ngay>21 && ngay <=31){
+                        document.getElementById("ketQua").innerHTML="bạn thuộc cung ma kết";
+                    }
+                    else{
+                        document.getElementById("ketQua").innerHTML="không có ngày mà bạn nhập";
+                    } break;
+
+
+                default: document.getElementById("ketQua").innerHTML="nhập sai thông tin";
+                    break;
+
+
+            }
+        }
+    }
+
+
+
+</script>
+
+</body>
+</html>

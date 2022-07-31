@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>CÂN NẶNG</table>
+<input id="weight" type="text"> <br>
+
+<table>CHIỀU CAO</table>
+<input id="height" type="text">
+<button id="check" onclick="xemChiSo()">CHECK</button>
+<h2 id="ketQua"></h2>
+<script>
+    function xemChiSo(){
+        let a = +document.getElementById("weight").value;
+        let b = +document.getElementById("height").value;
+        let c = a / (b * b)
+        if(c<16){
+            document.getElementById("ketQua").innerText="Mày là bộ xương à";
+        }else if (c < 18.5){
+            document.getElementById("ketQua").innerText = "Mày là idol hàn quốc à";
+        }else if (c < 25){
+                document.getElementById("ketQua").innerText = "Mày đẹp zai đấy"
+            }else if (c < 30){
+                    document.getElementById("ketQua").innerText = "Mày béo quá rồi đấy"
+                }else {
+                    document.getElementById("ketQua").innerText = "Thôi ông không cần giảm nữa đâu"
+                }
+    }
+
+</script>
+</body>
+</html>

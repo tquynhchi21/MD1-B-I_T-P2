@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text"id="x">nhập a
+<input type="text"id="y">nhập b
+<input type="text"id="z">nhập c
+<button onclick="phuongTrinhBacHai()">kêt quả</button>
+<p id="ketQua"></p>
+<script>a
+        function phuongTrinhBacHai() {
+            let x = +document.getElementById("x").value
+            let y = +document.getElementById("y").value
+            let z = +document.getElementById("z").value
+            let delta=(y*y-4*x*z)
+            if(delta ==0){
+                document.getElementById("ketQua").innerText="phuong trinh co nghiem kep x1=x2= "+-y/(2*x);
+            }else if(delta<0){
+                document.getElementById("ketQua").innerText="phuong trinh vo nghiem"
+            } else {
+                document.getElementById("ketQua").innerText="phuong trinh co hai nghiem x1="+(-y-Math.sqrt(delta))/(2*x)+"x2="+(-y+Math.sqrt(delta))/(2*x);
+            }
+
+        }
+</script>
+</body>
+</html>
